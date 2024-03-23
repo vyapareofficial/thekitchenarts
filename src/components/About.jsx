@@ -2,8 +2,17 @@ import React, { useEffect } from 'react';
 import AboutUsImg from '../assets/images/About_us.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { NavLink } from 'react-router-dom';
 
 function About({ scrollToContact }) {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
   useEffect(() => {
     AOS.init({duration: 2000});
     // Run this code when the component mounts or updates
@@ -34,10 +43,10 @@ function About({ scrollToContact }) {
           </p>
           <button
             id="rotateButtonAbout"
-            onClick={scrollToContact} // Add this onClick handler
+            // onClick={scrollToContact}
             className='my-3 mb-6 border-2 hover:border-[#25285A] hover:bg-white hover:text-[#25285A] transition duration-300 bg-[#25285A] text-white px-10 py-1 rounded-lg font-canada'
           >
-            GET STARTED
+            <NavLink to="/contact" onClick={scrollToTop} >GET STARTED</NavLink>
           </button>
         </div>
       </div>

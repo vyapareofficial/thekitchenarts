@@ -2,8 +2,21 @@ import React, { useEffect, useRef } from 'react';
 import bannerimg from '../assets/images/bannerimg.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { NavLink } from 'react-router-dom';
 
 const Banner = ({scrollToContact}) => {
+
+
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
+
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -37,15 +50,15 @@ const Banner = ({scrollToContact}) => {
     <div className='bg-[#F9EBEB] relative mt-5 sm:mt-20'>
       {/* Desktop View */}
       <div className="hidden md:block container mx-auto flex items-center justify-start">
-        <div className="max-w-2xl text-left p-4 md:p-2">
+        <div className="max-w-2xl text-left p-4 md:p-2 ml-[5rem]">
           <h2 className="text-xl md:text-3xl font-semibold font-faustine mb-4 md:mb-6">
             BEGIN THE JOURNEY TO YOUR DREAM KITCHEN
           </h2>
            <button
             ref={buttonRef}
             className="border-2 border-[#A15757] text-[#A15757] px-3 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
-            onClick={scrollToContact}   >
-            Speak To Our Expert
+               >
+            <NavLink to="/contact" onClick={scrollToTop} >Speak To Our Expert</NavLink>
           </button>
         </div>
         <div className="absolute p-10 top-1/2 right-0 transform -translate-y-1/2">
@@ -62,8 +75,8 @@ const Banner = ({scrollToContact}) => {
           <button
             ref={buttonRef}
             className="border-2 border-[#A15757] text-[#A15757] px-4 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
-            onClick={scrollToContact}  >
-            Speak To Our Expert
+              >
+            <NavLink to="/contact" onClick={scrollToTop} >Speak To Our Expert</NavLink>
           </button>
         </div>
         <div className="p-10" data-aos="slide-left">

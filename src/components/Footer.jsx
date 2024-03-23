@@ -3,6 +3,7 @@ import InteriorLogo from '../assets/images/kitchen_art_logo.png';
 import InstagramLogo from'../assets/images/instagram.png';
 import FbLogo from'../assets/images/Facebook.png';
 import WhatsappLogo from'../assets/images/Whatsapp.png';
+import { NavLink } from 'react-router-dom';
 
 
 const Footer = ({scrollToAboutus,scrollToService,scrollToModularkitchen,scrollToContact}) => {
@@ -26,11 +27,11 @@ const Footer = ({scrollToAboutus,scrollToService,scrollToModularkitchen,scrollTo
     </div>
 
     <div className="linksbox text-white mt-2  ml-3">
-        <p  onClick={scrollToAboutus} className='block  py-2 font-canada hover:cursor-pointer'>About Us</p>
-        <p onClick={scrollToService} className='block  py-2 font-canada hover:cursor-pointer'>Our Services</p>
-        <p onClick={scrollToModularkitchen} className='block  py-2 font-canada hover:cursor-pointer'>Modular Kitchen</p>
-        {/* <p className='block  py-2 font-canada'>Testimonials</p> */}
-        <p onClick={scrollToContact} className='block  py-2 font-canada hover:cursor-pointer'>Contact Us</p>
+
+        <NavLink to="/about"><p className='block  py-2 font-canada hover:cursor-pointer'>About Us</p></NavLink>
+        <NavLink to="/service"><p className='block  py-2 font-canada hover:cursor-pointer'>Our Services</p></NavLink>
+        <NavLink to="/modularkitchen"><p className='block  py-2 font-canada hover:cursor-pointer'>Modular Kitchen</p></NavLink>
+        <NavLink to="/contact"><p className='block  py-2 font-canada hover:cursor-pointer'>Contact Us</p></NavLink>
 
     </div>
 
@@ -38,21 +39,20 @@ const Footer = ({scrollToAboutus,scrollToService,scrollToModularkitchen,scrollTo
         <h2 class="text-[#F8CB89] text-[30px]">CONTACT US</h2>
 
         <div className="address text-white py-1">
-          <h6 className='font-canada'>Address :</h6>
-          <p className='font-canada'>16/123, Unnat Nagar, Part 3, M.G. Road, Goregaon (W),<br></br> Near Gajanan Maharaj Mandir, Mumbai 400062.</p>
+          <h6 className='font-canada'>Address</h6>
+          <p className='font-canada'>16/123, Unnat Nagar, Part 3, M.G. Road, Goregaon (W), Near Gajanan Maharaj Mandir, Mumbai 400062.</p>
         </div>
 
         <div className="phone text-white py-1">
-        <h6 className='font-canada'>Phone :</h6>
+        <h6 className='font-canada'>Phone</h6>
           <p className='font-canada'>+91 9819953650</p>
           <p className='font-canada'>+91 9967208838</p>
 
         </div>
 
         <div className="email text-white py-1">
-        <h6 className='font-canada'>Email Id :</h6>
+        <h6 className='font-canada'>Email</h6>
           <p className='font-canada'>thekitchenart2018@gmail.com </p>
-
         </div>
 
 

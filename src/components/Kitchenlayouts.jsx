@@ -101,11 +101,11 @@ export default function Kitchenlayouts() {
                         islandlay
               }
               alt=""
-              className='sm:h-[500px] w-full'
+              className='h-[350px] sm:h-[500px] w-full'
             />
 
             <div className="absolute bottom-0 left-0 mb-2 ml-2 flex items-center">
-              <p className=" text-xl sm:text-2xl p-1 text-white font-roboto  font-bold mr-2">{selectedLayout} Kitchen</p>
+              <p className="md:text-3xl sm:text-2xl p-1 text-white font-roboto  font-bold mr-2">{selectedLayout} Kitchen</p>
               <div className="w-6 h-1 bg-white"></div>
             </div>
 

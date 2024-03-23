@@ -3,8 +3,17 @@ import StepsImg from '../assets/images/steps2.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Steps = ({scrollToContact}) => {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     AOS.init({duration: 2000});
   }, []);
@@ -42,7 +51,7 @@ const Steps = ({scrollToContact}) => {
       </li>
     </ul>
 
-    <button className='bg-[#A15757] text-[white] px-3 py-3 font-roboto text-sm'   onClick={scrollToContact} >Book Consultation</button>
+    <button className='bg-[#A15757] text-[white] px-3 py-3 font-roboto text-sm' ><NavLink to ="/contact" onClick={scrollToTop} >Book Consultation</NavLink></button>
 
 
 </div>
